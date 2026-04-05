@@ -30,8 +30,9 @@
 
       const img = await new Promise((resolve, reject) => {
         const el = new Image();
-        el.onload = () => resolve(el);
-        el.onerror = () => reject(new Error('Failed to load image.'));
+        const timer = setTimeout(() => reject(new Error('Image load timed out.')), 10000);
+        el.onload = () => { clearTimeout(timer); resolve(el); };
+        el.onerror = () => { clearTimeout(timer); reject(new Error('Failed to load image.')); };
         el.src = imageData;
       });
 

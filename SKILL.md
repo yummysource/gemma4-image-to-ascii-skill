@@ -2,7 +2,7 @@
 name: image-to-ascii
 description: Convert an image or photo to ASCII art. Trigger when the user shares an image and wants to convert it to ASCII art, text art, or character art.
 metadata:
-  homepage: <https://github.com/Yuuichu/gemma4-image-to-ascii-skill>
+  homepage: https://github.com/Yuuichu/gemma4-image-to-ascii-skill
 ---
 
 # Image to ASCII Art
